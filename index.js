@@ -2,13 +2,11 @@ var fs = require('fs');
 var styleme = require('styleme');
 class logger {
     constructor(config) {
-
         this.lvl = config.level || 0;
         this.presets = config.presets || {};
         this.path = config.path + "/" + Date.now + ".txt";
         this.init();
     }
-
     init() {
 
 
