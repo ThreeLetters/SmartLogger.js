@@ -5,11 +5,14 @@ class logger {
 
         this.lvl = config.level || 0;
         this.presets = config.presets || {};
-
+        this.path = config.path + "/" + Date.now + ".txt";
         this.init();
     }
 
+    init() {
 
+
+    }
     log( /**/ ) {
         arguments = Array.prototype.slice.call(arguments);
         var i = 0;
@@ -48,6 +51,6 @@ class logger {
         var stack = error.stack;
         if (!stack) return false;
 
-        stack = stac.split("\n")
+        stack = stack.split("\n")
     }
 }
